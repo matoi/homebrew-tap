@@ -2,12 +2,13 @@ class LvPlus < Formula
   desc "Extended multilingual file viewer and grep"
   homepage "https://github.com/matoi/lv"
   url "https://github.com/matoi/lv.git",
-      revision: "a651c5669190cb867846a32375e13fa9baaf6227"
-  version "4.51-plus.1"
+      revision: "ea2a7d2e845305f65baaf8ef36d9adb20d515fba"
+  version "4.51-plus.2"
   license "GPL-2.0-or-later"
   head "https://github.com/matoi/lv.git", branch: "plus"
 
   depends_on "cmigemo"
+  depends_on "highlight"
 
   uses_from_macos "ncurses"
 
@@ -17,7 +18,8 @@ class LvPlus < Formula
     cd "build" do
       system "../src/configure",
              "--prefix=#{prefix}",
-             "--with-cmigemo=#{formula_opt_prefix("cmigemo")}"
+             "--with-cmigemo=#{formula_opt_prefix("cmigemo")}",
+             "--with-highlight=#{formula_opt_prefix("highlight")}"
       system "make"
       bin.install "lv"
       bin.install_symlink "lv" => "lgrep"
