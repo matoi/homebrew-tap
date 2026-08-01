@@ -1,10 +1,11 @@
 class LvPlus < Formula
   desc "Extended multilingual file viewer and grep"
   homepage "https://github.com/matoi/lv"
-  url "https://github.com/matoi/lv.git",
-      revision: "ea2a7d2e845305f65baaf8ef36d9adb20d515fba"
+  url "https://github.com/matoi/lv/archive/ea2a7d2e845305f65baaf8ef36d9adb20d515fba.tar.gz"
   version "4.51-plus.2"
+  sha256 "66007c86f67c5d7ad96ed61802c3bb1a71f34ca76068d6e3a7bf1d3600269f50"
   license "GPL-2.0-or-later"
+  revision 1
   head "https://github.com/matoi/lv.git", branch: "plus"
 
   depends_on "cmigemo"
