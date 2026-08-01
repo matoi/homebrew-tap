@@ -5,6 +5,7 @@ class LvPlus < Formula
       revision: "a651c5669190cb867846a32375e13fa9baaf6227"
   version "4.51-plus.1"
   license "GPL-2.0-or-later"
+  head "https://github.com/matoi/lv.git", branch: "plus"
 
   depends_on "cmigemo"
 
